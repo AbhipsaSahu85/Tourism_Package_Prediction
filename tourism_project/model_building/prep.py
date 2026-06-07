@@ -20,7 +20,8 @@ print("Dataset loaded successfully.")
 target_col = 'ProdTaken'
 
 # Drop unique identifier column (not useful for modeling)
-df.drop(columns=['CustomerID', inplace=True)]
+ df.drop(columns=['CustomerID'], inplace=True)
+       
 
 # Drop the unnamed index column if it exists
 df.drop(columns=['Unnamed: 0'], errors='ignore', inplace=True)
